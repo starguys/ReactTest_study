@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import styled from "styled-components";
+import { useState } from "react";
+
+const Container = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const CounterBox = styled.div``;
+
+const MathBox = styled.div``;
+
+const MinuseBox = styled.div``;
+
+const PlusBox = styled.div``;
 
 function App() {
+  const [counter, setCounter] = useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <CounterBox>
+        <h3 data-testid="counter">{counter}</h3>
+      </CounterBox>
+      <MathBox></MathBox>
+    </Container>
   );
 }
 
